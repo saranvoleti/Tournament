@@ -15,7 +15,7 @@ def deleteMatches():
     """Remove all the match records from the database."""
     DB = connect()
     c = DB.cursor()
-    
+    query = "DELETE from matches WHERE match_id NOTNULL;"
     c.execute(query)
     DB.commit()
     DB.close()
